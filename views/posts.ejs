@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' type='text/css' href='styles.css'>
+  <title>Plate Rate Homework</title>
+</head>
+<body>
+  <div class="post-container">
+    <h1>Posts</h1>
+    <ul class="post-list">
+        <% posts.forEach((p) => { %>
+            <li>
+              <p class="title"><%= p.title %></p>
+              <p class="body"><%= p.body %></p>
+            </li>
+        <% }); %>
+    </ul>
+  </div>
+</body>
+</html>
