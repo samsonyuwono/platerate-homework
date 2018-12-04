@@ -26,7 +26,7 @@ module.exports = app => {
   });
 
   app.get("/posts", (req, res) => {
-    var postData = require("./posts.json");
+    let postData = require("../posts.json");
     res.render("posts", {
       title: "Posts",
       posts: postData

@@ -1,7 +1,5 @@
 const express = require("express"),
-  app = express(),
-  url = "https://jsonplaceholder.typicode.com",
-  request = require("request");
+  app = express();
 
 var postRoute = require("./routes/posts.js");
 var aboutRoute = require("./routes/aboutme.js");
