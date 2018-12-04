@@ -10,7 +10,7 @@ module.exports = app => {
       techstack: about.techstack,
       hobbies: about.hobbies
     };
-    res.send(data);
+    res.send(JSON.stringify(data));
   });
 
   app.get("/aboutme/:q", (req, res, err) => {

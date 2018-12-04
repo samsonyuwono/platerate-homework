@@ -2,8 +2,7 @@ const express = require("express"),
   app = express(),
   fs = require("fs"),
   url = "https://jsonplaceholder.typicode.com",
-  request = require("request"),
-  path = require("path");
+  request = require("request");
 
 module.exports = app => {
   app.use("/posts", (req, res, next) => {
