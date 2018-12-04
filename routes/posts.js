@@ -5,6 +5,14 @@ const express = require("express"),
   request = require("request");
 
 module.exports = app => {
+  app.get("/posts", (req, res, next) => {
+    let postData = require("../posts.json");
+    res.render("posts", {
+      title: "Posts",
+      posts: postData
+    });
+    next();
+  });
   app.use("/posts", (req, res, next) => {
     request(
       {
@@ -22,14 +30,5 @@ module.exports = app => {
         }
       }
     );
-    next();
-  });
-
-  app.get("/posts", (req, res) => {
-    let postData = require("../posts.json");
-    res.render("posts", {
-      title: "Posts",
-      posts: postData
-    });
   });
 };
